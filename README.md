@@ -40,14 +40,7 @@ This Python-based web application is designed for advanced network vulnerability
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     pip install -r requirements.txt
     ```
-
-3. **Configure API Key**:
-    Edit `config.py` and add your OpenAI API key:
-    ```python
-    OPENAI_API_KEY = 'your-api-key-here'
-    ```
-
-4. **Start the Application**:
+3. **Start the Application**:
     Run the web application using:
     ```bash
     python app.py
@@ -86,7 +79,7 @@ Contributions are welcome! If you'd like to contribute to the development of thi
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [http://nsa.gov](LICENSE) file for details.
 
 ## Acknowledgments
 
@@ -97,7 +90,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any questions or support, please contact [your-email@example.com](mailto:your-email@example.com).
+For any questions or support, please contact [black1_1hat@proton.me](mailto:your-email@example.com).
 
 ---
 
