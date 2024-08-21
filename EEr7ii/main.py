@@ -352,10 +352,6 @@ def parse_threatpost(page_content, base_url):
 
     return exploits
 
-
-# You can add similar parsing functions for other sources
-
-
 # Add similar parsing functions for other sources like rapid7, packetstorm, etc.
 
 if __name__ == '__main__':
