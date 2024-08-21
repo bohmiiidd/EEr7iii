@@ -1,6 +1,6 @@
-# EEr7iii 
+# EEr7iii 🌿
 
-# Network Vulnerability Scanner & Backdoor Generator
+# Network Vulnerability Scanner & Backdoor Generator ☣️
 
 ## Overview
 
@@ -14,7 +14,7 @@ This Python-based web application is designed for advanced network vulnerability
 - **AI Assistance**: Leverage OpenAI's AI to assist in vulnerability assessment and provide insights based on the latest security trends.
 - **Extensive Exploit Database**: Access a wide range of exploits and scanners sourced from various reputable sites.
 
-## Installation
+## Installation ✔️
 
 ### Prerequisites
 
@@ -78,7 +78,7 @@ Contributions are welcome! If you'd like to contribute to the development of thi
 
 ## License
 
-This project is licensed under the MIT License - see the [http://nsa.gov](LICENSE) file for details.
+This project is licensed under the MIT License - see the [http://nsa.gov](LICENSE) file for details.🦇
 
 ## Acknowledgments
 
@@ -87,9 +87,9 @@ This project is licensed under the MIT License - see the [http://nsa.gov](LICENS
 - **OpenAI**: For providing advanced AI tools and insights.
 - **Various Exploit Sources**: For contributing to the extensive exploit database.
 
-## Contact
+## Contact ☎️
 
-For any questions or support, please contact [black1_1hat@proton.me](mailto:your-email@example.com).
-Youtube Channel >> [http://www.Youtube.com/@black1_1hat]
+📧 For any questions or support, please contact [black1_1hat](mailto:black1_1hat@proton.me).
+📺 Youtube Channel >> [http://www.Youtube.com/@black1_1hat] 
 
 ---
