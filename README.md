@@ -1,7 +1,5 @@
 # EEr7iii is Network Vulnerability Scanner &amp; Backdoor Generator
-Certainly! Here's a professional README template for your GitHub repository:
 
----
 
 # Network Vulnerability Scanner & Backdoor Generator
 
