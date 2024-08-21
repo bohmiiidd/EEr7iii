@@ -37,12 +37,13 @@ This Python-based web application is designed for network vulnerability scanning
     ```bash
     python -m venv venv
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
+    pip3 install --upgrade Flask Werkzeug
     ```
 3. **Start the Application**:
     Run the web application using:
     ```bash
-    python app.py
+    python3 app.py
     ```
 
 ## Usage
