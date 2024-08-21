@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Backdoor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #e74c3c;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .button {
+            padding: 10px 15px;
+            background-color: #e74c3c;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #c0392b;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        .output h2 {
+            margin-top: 0;
+        }
+        .info {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        .info h2 {
+            margin-top: 0;
+        }
+        .info p {
+            margin: 5px 0;
+        }
+        .banner {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+        .banner ul {
+            list-style: none;
+            padding: 0;
+        }
+        .banner ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        .banner ul li a {
+            color: #00ff2a;
+            text-decoration: none;
+        }
+        .banner ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Factory Backdoor</h1>
+
+        <form action="/factory_backdoor" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="ip">IP Address:</label>
+                <input type="text" id="ip" name="ip" placeholder="Enter IP Address" required>
+            </div>
+            <div class="form-group">
+                <label for="port">Port:</label>
+                <input type="text" id="port" name="port" placeholder="Enter Port" required>
+            </div>
+            <div class="form-group">
+                <label for="binary">Upload Binary:</label>
+                <input type="file" id="binary" name="binary" required>
+            </div>
+            <button type="submit" class="button">Execute Backdoor</button>
+        </form>
+
+        {% if command_output %}
+        <div class="output">
+            <h2>Command Output</h2>
+            <pre>{{ command_output }}</pre>
+        </div>
+        {% endif %}
+
+        {% if download_link %}
+        <div class="output">
+            <h2>Download Backdoored Binary</h2>
+            <a href="{{ download_link }}" class="button">Download</a>
+        </div>
+        {% endif %}
+
+        {% if working_directory or current_time or user or user_id %}
+        <div class="info">
+            <h2>System Information</h2>
+            {% if working_directory %}
+            <p><strong>Working Directory:</strong> {{ working_directory }}</p>
+            {% endif %}
+            {% if current_time %}
+            <p><strong>Current Time:</strong> {{ current_time }}</p>
+            {% endif %}
+            {% if user %}
+            <p><strong>Logged-in User:</strong> {{ user }}</p>
+            {% endif %}
+            {% if user_id %}
+            <p><strong>User ID:</strong> {{ user_id }}</p>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="banner">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/scrape_exploits">Mix</a></li>
+            <li><a href="/search_exploits">Vulners Database</a></li>
+            <li><a href="/ai_assistance">AI Assistance</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    <div class="machine-container">
+        <h1>[Er7ii]</h1>
+        <div class="input-section">
+            <form id="scan-form" action="/perform_scan" method="POST">
+                <div class="input-group">
+                    <label for="target">Target:</label>
+                    <input type="text" id="target" name="target" placeholder="e.g., 192.168.1.1, example.com, ::1" required>
+                </div>
+                <div class="input-group">
+                    <label for="scan_type">Scan Type:</label>
+                    <select id="scan_type" name="scan_type">
+                        <option value="nmap">TCP Port Scan</option>
+                        <option value="version_scanner">Version Scanner</option>
+                        <option value="vuln_scanner">Vulnerability Scanner</option>
+                        <option value="aggressive_scan">Aggressive Scan</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="stealth_scan">Stealth Scan:</label>
+                    <input type="checkbox" id="stealth_scan" name="stealth_scan">
+                </div>
+                <div class="input-group">
+                    <label for="verbose">Verbose:</label>
+                    <input type="checkbox" id="verbose" name="verbose">
+                </div>
+                <button type="submit">Start Scan</button>
+                <div id="loading-message" style="display:none;">Please wait, the scan is in progress...</div>
+            </form>
+        </div>
+        <div class="output-section">
+            <h2>Scan Output</h2>
+            <pre id="output">{{ scan_output if scan_output else "Output will appear here..." }}</pre>
+        </div>
+        <div class="web-shell-container">
+            <h2>Web Shell</h2>
+            <form id="web-shell-form" action="/execute_command" method="POST">
+                <textarea id="command" name="command" rows="10" placeholder="Enter command here..." required></textarea>
+                <button type="submit">Execute</button>
+            </form>
+            <div class="output-section">
+                <h3>Command Output</h3>
+                <pre id="web-shell-output">{{ command_output if command_output else "Output will appear here..." }}</pre>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <ul>
+            <li><a href="/factory_backdoor">Factory Backdoor</a></li>
+            <li><a href="/scrape_exploits">Mix </a></li>
+            <li><a href="/search_exploits">Vulners Database</a></li>
+            <li><a href="/ai_assistance">AI Assistance</a></li>
+            <br>
+            -By @black1_1Hat-
+        </ul>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
