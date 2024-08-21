@@ -1,5 +1,4 @@
-# EEr7iii is Network Vulnerability Scanner &amp; Backdoor Generator
-
+# EEr7iii 
 
 # Network Vulnerability Scanner & Backdoor Generator
 
