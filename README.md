@@ -4,7 +4,7 @@
 
 ## Overview
 
-This Python-based web application is designed for advanced network vulnerability scanning, backdoor generation, and web shell integration. It combines the power of Nmap for network scanning, Backdoor Factory for backdoor creation, and OpenAI for AI-driven insights and support. The tool also integrates various exploit sources, scanners, and information from multiple websites to provide comprehensive security testing capabilities.
+This Python-based web application is designed for network vulnerability scanning, backdoor generation, and web shell integration. It combines the power of Nmap for network scanning, Backdoor Factory for backdoor creation, and OpenAI for AI-driven insights and support. The tool also integrates various exploit sources, scanners, and information from multiple websites to provide comprehensive security testing capabilities.
 
 ## Features
 
